@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <nav>
+        
+        <button class="button button-green2">Button</button>
+        <button class="button button-green1">Button</button>
+        
+   </nav>
+    <!-- c=white --->
+   <div style="background-color: rgb(0, 230, 118);padding: 15px;">
+       
+        <!-- switchers --->
+        
+        <div class="switcher">
+            <input type="checkbox" value="1" id="switcher1" name=""/>
+            <label for="switcher1"></label><br />
+        </div>
+        <div class="switcher">
+            <input type="checkbox" value="1" id="switcher2" name=""/>
+            <label for="switcher2"></label><br />
+        </div>
+        
+        <!-- checkers --->
+        
+        <div class ="checker">
+            <input type="checkbox" value="1" id="checker1" name=""/>
+            <label for="checker1"></label>
+        </div>
+        <div class ="checker">
+            <input type="checkbox" value="1" id="checker2" name=""/>
+            <label for="checker2"></label>
+        </div>
+        
+        <!-- buttons --->
+        
+        <button class="button">Button</button>
+        
+
+   </div>
+   
+   <div style="background-color: rgb(178, 255, 89);padding: 15px;">
+       
+        <!-- switchers --->
+        
+        <div class="switcher">
+            <input type="checkbox" value="1" id="switcher3" name=""/>
+            <label for="switcher3"></label><br />
+        </div>
+        <div class="switcher">
+            <input type="checkbox" value="1" id="switcher4" name=""/>
+            <label for="switcher4"></label><br />
+        </div>
+        
+        <!-- checkers --->
+        
+        <div class ="checker">
+            <input type="checkbox" value="1" id="checker3" name=""/>
+            <label for="checker3"></label>
+        </div>
+        <div class ="checker">
+            <input type="checkbox" value="1" id="checker4" name=""/>
+            <label for="checker4"></label>
+        </div>
+        
+        <!-- buttons --->
+        
+        <button class="button">Button</button>
+        
+
+   </div>
+   
+   
+   
+   
+   <!-- c=color --->
+   <div style="background-color: #fff;padding: 15px;">
+       
+        <!-- switchers --->
+        
+        <div class="switcher switcher-blue">
+            <input type="checkbox" value="1" id="switcher5" name=""/>
+            <label for="switcher5"></label><br />
+        </div>
+        <div class="switcher switcher-purple">
+            <input type="checkbox" value="1" id="switcher6" name=""/>
+            <label for="switcher6"></label><br />
+        </div>
+        
+        <!-- checkers --->
+        
+        <div class ="checker checker-blue">
+            <input type="checkbox" value="1" id="checker5" name=""/>
+            <label for="checker5"></label>
+        </div>
+        <div class ="checker checker-purple">
+            <input type="checkbox" value="1" id="checker6" name=""/>
+            <label for="checker6"></label>
+        </div>
+        
+        <!-- buttons --->
+        <button class="button button-green2">Button</button>
+        <button class="button button-green1">Button</button>
+        <button class="button button-yellow">Button</button>
+        <button class="button button-orange">Button</button>
+        
+
+   </div>
+   
+   <div style="background-color: #fff;padding: 15px;">
+       
+        <!-- switchers --->
+        
+        <div class="switcher switcher-red">
+            <input type="checkbox" value="1" id="switcher7" name=""/>
+            <label for="switcher7"></label><br />
+        </div>
+        <div class="switcher switcher-green2">
+            <input type="checkbox" value="1" id="switcher8" name=""/>
+            <label for="switcher8"></label><br />
+        </div>
+        
+        <!-- checkers --->
+        
+        <div class ="checker checker-red">
+            <input type="checkbox" value="1" id="checker7" name=""/>
+            <label for="checker7"></label>
+        </div>
+        <div class ="checker checker-green2">
+            <input type="checkbox" value="1" id="checker8" name=""/>
+            <label for="checker8"></label>
+        </div>
+        
+        <!-- buttons --->
+        
+        <button class="button button-red">Button</button>
+        <button class="button button-purple">Button</button>
+        <button class="button button-blue" id="openbtn">Modal</button>
+<!--        <button class="button button-orange">Button</button>-->
+        
+
+   </div>
+   <div class="modal-close" id="modal-back">
+       
+   </div>
+   <div class="modal modal-close" id="modal">
+       <div class="modal-header" id="modal-header"></div>
+       <div class="modal-content">
+           <h2>WIFI</h2>
+           <p>SSID</p>
+           <input type="text" class="inputtext"/>
+           <p>PASSword</p>
+           <input type="text" class="inputtext"/>
+       </div>
+        <button class="button button-green2">OK</button>
+        <button class="button button-red" id="modal-cancel">Cancel</button>
+   </div>
+   <script src="jquery.min.js"></script>
+   <script>
+       var btn = document.getElementById("openbtn");
+       $("#modal").fadeOut(0)
+       btn.onclick = function (){
+            
+            $("#modal-back").removeClass("modal-close");
+            $("#modal-back").addClass("modal-back");
+            $("#modal-back").width($(window).width());
+            $("#modal-back").height($(window).height());
+            $("#modal").addClass("modal-opened");
+            $("#modal").removeClass("modal-close");
+            $("#modal").fadeIn()
+            document.getElementById("modal").style.top = String($(window).height()/2-$("#modal").height()/2)+"px";
+            document.getElementById("modal").style.left = String($(window).width()/2-$("#modal").width()/2)+"px";
+       }
+       $(document).scroll (function(){
+           if ($(document).scrollTop() > 10)
+               $('nav').addClass('navfixed');
+           else
+               $('nav').removeClass('navfixed');
+       });
+       $(window).resize (function(){
+           document.getElementById("modal").style.top = String($(window).height()/2-$("#modal").height()/2)+"px";
+           document.getElementById("modal").style.left = String($(window).width()/2-$("#modal").width()/2)+"px";
+           $("#modal-back").width($(window).width());
+           $("#modal-back").height($(window).height());
+       })
+       var btn2 = document.getElementById("modal-cancel");
+       btn2.onclick = function (){
+            $("#modal").fadeOut(0)
+            $("#modal").removeClass("modal-opened");
+            $("#modal").addClass("modal-close");
+            $("#modal-back").addClass("modal-close");
+            $("#modal-back").removeClass("modal-back");
+            document.getElementById("modal").style.top = String(-100000)+"px";
+       }
+       var modalheadermd = false;
+       document.getElementById("modal-header").onmousedown = function(){
+           modalheadermd = true;
+           console.log("weir")
+           document.onmousemove = function (event){
+               
+               if(modalheadermd == true){
+                    document.getElementById("modal").style.top = String(event.clientY-12)+"px";
+                    console.log(event.clientX);
+                    document.getElementById("modal").style.left = String(event.clientX-100)+"px";    
+                    //console.log(event.clientY)
+               }
+               
+           }
+       }
+       document.onmouseup = function(){
+           modalheadermd = false;
+       }
+   </script>
+</body>
+</html>

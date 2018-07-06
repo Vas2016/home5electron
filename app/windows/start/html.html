@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../fonts/OpenSans/OpenSans.css">
+    <link rel="stylesheet" href="css.css">
+    <style>
+        body {
+            font-family: "OpenSans";
+        }
+    </style>
+    <!-- <style type="text/css" media="all">
+        html {
+            border-radius: 5px;
+        }
+    </style> -->
+    <title>Document</title>
+
+</head>
+
+<body id="body">
+
+    <div class="dragMenu">
+        <!-- <img src="./icons/ic_settings_white_24px.svg" alt="" srcset="" class="menuImgLeft"> -->
+        <h1 class="menuHead">Olen</h1>
+        <div style="width:16px; height:16px; right:2px; top:2px; position: absolute; -webkit-app-region: no-drag; cursor: pointer;"
+            class="close">
+            <img src="./icons/ic_close_white_48px.svg" alt="" srcset="" class="menuImgRight">
+        </div>
+    </div>
+    <div class="content">
+        <p class="vt" id="temp">Температура = 0 C</p>
+        <p class="vt" id="humid">Влажность = 0 %</p>
+        <p class="vt" id="pochva">Почва = 0</p>
+        <p class="vt" id="light">Освешение = 0</p>
+        <div class="button1" id="polive">
+            <p>Полив</p>
+        </div>
+    </div>
+
+
+    <script>
+        const { ipcRenderer } = require('electron')
+
+        function close() {
+            ipcRenderer.send('close', 'close');
+        }
+        var closeEl = document.querySelector('.close');
+
+        closeEl.addEventListener('click', function () {
+            close();
+        });
+
+    </script>
+</body>
+
+</html>

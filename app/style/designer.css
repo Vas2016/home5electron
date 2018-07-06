@@ -1,0 +1,486 @@
+nav {
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(39, 39, 39, 0.9);
+/*    position: relative;*/
+/*    padding: 5px;*/
+/*    height: 65px;*/
+     overflow: auto;
+}
+
+.mobilenav {
+    
+}
+
+.dis {
+    opacity: 0;
+    top:-10000px;
+    position: absolute
+}
+
+a {
+    text-decoration: none;
+}
+
+.bigText {
+    font-size: 50px;
+/*    margin-left: -10px;*/
+}
+
+.menu1 {
+    color:#fff;
+    background-color: rgba(0,0,0,0.8);
+    padding: 25px;
+    
+    margin-top: 300px;
+    
+/*    position: relative;*/
+/*    margin-top: 25%;*/
+}
+
+#pc1 {
+    background-image: url(bk.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.navfixed {
+    position: fixed;
+    top: 0px;
+    z-index: 10;
+}
+
+.modal-close {
+    top: -100000px;
+    opacity: 0;
+/*    top: 0px;*/
+    position: fixed;
+    
+}
+
+
+
+h2{
+    font-size: 25px;
+    margin: 5px;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 5px;
+}
+
+.modal-content {
+    padding: 15px;
+}
+
+.modal-header {
+    background-color: #d9d9d9;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.pageContent3{
+    width: 100%;
+    position: relative;
+}
+
+
+.pageContent3 DIV div {
+/*    padding: 30px;*/
+    width: 100%;
+}
+
+.pageContent3 DIV div * {
+    text-align: center;
+    margin: 10px;
+}
+
+.pageContent3 DIV div h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+/*768px*/
+@media (min-width: 767px){
+    .pageContent3 DIV {
+        position: absolute;
+    /*    padding: 30px;*/
+    }
+    .menu1 {
+        margin-left: 50%;
+    }
+    .pageContent31{
+        width: 33%;
+        left: 0;    
+        border-right-style: solid;
+        border-right-color: #606060;
+        border-right-width: 2px;
+    }
+    .pageContent32{
+        width: 34%;
+        left: 33%;
+        border-right-style: solid;
+        border-right-color: #606060;
+        border-right-width: 2px;
+    }
+    .pageContent33{
+        width: 33%;
+        right: 0;
+    }
+}
+
+.modal-opened {
+    z-index: 90;
+    background-color: #fff;
+/*    top: 0px;*/
+    position: fixed;
+    box-shadow: 0px 0px 40px rgba(0,0,0,0.4);
+    width: auto;
+    
+}
+
+.modal-back{
+    background-color: rgba(0, 0, 0, 0.63);
+    top:0;
+    left: 0;
+    z-index: 5;
+    position: fixed;
+/*    transition: 100ms;*/
+}
+
+.switcher label {
+    background-color: rgba(0,0,0,0);
+    border-style: solid;
+    border-color: #fff;
+    border-width: 2px;
+    cursor: pointer;
+    width: 30px;
+    height: 13px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
+    transition: all 150ms;
+}
+
+
+.switcher label:after {
+    content: '';
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: -6px;
+    left:-7px;
+    background-color: #fff;
+    border-radius: 50px;
+    transition: all 150ms;
+    
+}
+
+.switcher input[type=checkbox]{
+    opacity: 0;
+}
+
+.switcher input[type=checkbox]:checked + label:after {
+    left:14px;
+}
+
+
+
+.switcher {
+    position: relative;
+    padding: 0px;
+    margin: 24px;
+}
+
+.checker {
+	width: 24px;
+	margin: 24px ;
+	position: relative;
+}
+
+.checker label {
+	cursor: pointer;
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 0;
+  	left: 0;
+	background: one;
+	border:2px solid #fff;
+    
+    transition: all 150ms;
+}
+
+.checker label:after {
+	opacity: 0;
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 8px;
+	background: transparent;
+	top: 5px;
+	left: 5px;
+	border: 2px solid #fff;
+	border-top: none;
+	border-right: none;
+    transition: all 150ms;
+	transform: rotate(-45deg);
+}
+
+/**
+ * Create the hover event of the tick
+ */
+.checker input[type=checkbox]{
+    opacity: 0;
+}
+
+/**
+ * Create the checkbox state for the tick
+ */
+.checker input[type=checkbox]:checked + label:after {
+	opacity: 1;
+}
+
+.button {
+    border: 2px solid #fff;
+    background-color: rgba(0,0,0,0);
+    color: #fff;
+    /* height: 24px; */
+    font-size: 18px;
+    padding: 8px;
+    margin: 12px;
+    cursor: pointer;
+    transition: all 150ms;
+}    
+
+.button:active {
+    background-color: rgba(255,255,255,0.2);
+    transition: all 150ms;
+}
+
+.button:focus {
+    outline:  none;
+}
+
+.checker-green1 label {
+    border:2px solid rgb(178, 255, 89);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-green1 input[type=checkbox]:checked + label {
+	background-color: rgb(178, 255, 89);
+}
+
+.checker-green2 label {
+    border:2px solid rgb(0, 230, 118);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-green2 input[type=checkbox]:checked + label {
+	background-color: rgb(0, 230, 118);
+}
+
+.switcher-green1 label {
+    border:2px solid rgb(178, 255, 89);
+}
+
+.switcher-green1 label:after {
+    background-color: rgb(178, 255, 89);
+}
+
+.switcher-green2 label {
+    border:2px solid rgb(0, 230, 118);
+}
+
+.switcher-green2 label:after {
+    background-color: rgb(0, 230, 118);
+}
+
+
+
+.checker-yellow label {
+    border:2px solid rgb(255, 254, 86);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-yellow input[type=checkbox]:checked + label {
+	background-color: rgb(255, 254, 86);
+}
+
+.checker-orange label {
+    border:2px solid rgb(255, 156, 92);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-orange input[type=checkbox]:checked + label {
+	background-color: rgb(255, 156, 92);
+}
+
+.switcher-yellow label {
+    border:2px solid rgb(255, 254, 86);
+}
+
+.switcher-yellow label:after {
+    background-color: rgb(255, 254, 86);
+}
+
+.switcher-orange label {
+    border:2px solid rgb(255, 156, 92);
+}
+
+.switcher-orange label:after {
+    background-color: rgb(255, 156, 92);
+}
+
+.switcher-red label {
+    border:2px solid rgb(255, 108, 89);
+}
+
+.switcher-red label:after {
+    background-color: rgb(255, 108, 89);
+}
+
+.checker-red label {
+    border:2px solid rgb(255, 108, 89);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-red input[type=checkbox]:checked + label {
+	background-color: rgb(255, 108, 89);
+}
+.switcher-blue label {
+    border:2px solid rgb(118, 208, 255);
+}
+
+.switcher-blue label:after {
+    background-color: rgb(118, 208, 255);
+}
+
+.checker-blue label {
+    border:2px solid rgb(118, 208, 255);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-blue input[type=checkbox]:checked + label {
+	background-color: rgb(118, 208, 255);
+}
+
+.switcher-purple label {
+    border:2px solid rgb(214, 108, 254);
+}
+
+.switcher-purple label:after {
+    background-color: rgb(214, 108, 254);
+}
+
+.checker-purple label {
+    border:2px solid rgb(214, 108, 254);
+    background-color: rgba(0,0,0,0);
+}
+
+.checker-purple input[type=checkbox]:checked + label {
+	background-color: rgb(214, 108, 254);
+}
+
+.button-red{
+    color: rgb(255, 108, 89);
+    border:2px solid rgb(255, 108, 89);
+}
+.button-blue{
+    color: rgb(118, 208, 255);
+    border:2px solid rgb(118, 208, 255);
+}
+.button-purple{
+    color: rgb(214, 108, 254);
+    border:2px solid rgb(214, 108, 254);
+}
+
+.button-red:active{
+    color: #fff;
+    background-color: rgb(255, 108, 89);
+    border:2px solid rgb(255, 108, 89);
+}
+.button-blue:active{
+    color: #fff;
+    background-color: rgb(118, 208, 255);
+    border:2px solid rgb(118, 208, 255);
+}
+.button-purple:active{
+    color: #fff;
+    background-color: rgb(214, 108, 254);
+    border:2px solid rgb(214, 108, 254);
+}
+
+
+
+
+.button-green1{
+    color: rgb(178, 255, 89);
+    border:2px solid rgb(178, 255, 89);
+}
+.button-green2{
+    color: rgb(0, 230, 118);
+    border:2px solid rgb(0, 230, 118);
+}
+.button-yellow{
+    color: rgb(255, 229, 32);
+    border:2px solid rgb(255, 229, 32);
+}
+
+.button-grey{
+    color: rgba(98, 98, 98, 1);
+    border:2px solid rgba(98, 98, 98, 1);
+}
+
+.button-orange{
+    color: rgb(255, 156, 92);
+    border:2px solid rgb(255, 156, 92);
+}
+
+.button-green1:active{
+    color: #fff;
+    background-color: rgb(178, 255, 89);
+    border:2px solid rgb(178, 255, 89);
+}
+.button-green2:active{
+    color: #fff;
+    background-color: rgb(0, 230, 118);
+    border:2px solid rgb(0, 230, 118);
+}
+.button-yellow:active{
+    color: rgba(98, 98, 98, 1);
+    background-color: rgb(255, 254, 86);
+    border:2px solid rgb(255, 254, 86);
+}
+.button-grey:active{
+    color: #fff;
+    background-color: rgba(98, 98, 98, 1);
+    border:2px solid rgba(98, 98, 98, 1);
+}
+.button-orange:active{
+    color: #fff;
+    background-color: rgb(255, 156, 92);
+    border:2px solid rgb(255, 156, 92);
+}
+
+.inputtext {
+    border-style: solid;
+    border-color: rgba(98, 98, 98, 1);
+    color: rgba(98, 98, 98, 1);
+    background-color: rgba(0,0,0,0);
+    padding: 5px;
+    margin: 5px;
+}
+
+.inputtext:focus{
+    outline:  none;
+}
+
+p{
+    margin: 10px;
+}

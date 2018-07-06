@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navfixed">
+        <div>
+            <h1 style="float:left;color:#fff;margin:15px;">Logo</h1>
+            <div id="navButtons" class="">
+                <button class="button" style="float:right;">Услуги</button>
+                <button class="button" style="float:right;">Портфолио</button>
+                <button class="button" style="float:right;">О компании</button>
+                <button class="button" style="float:right;">Контакты</button>
+                <button class="button button-yellow" style="float:right;">Новости</button>    
+            </div> 
+            <div id="mbtn" class="dis">
+                <button class="button button-yellow" id="mobtn" style="float:right;">+</button>    
+            </div>
+            <div id="mobilenav" class="dis" style="float:right;">
+                <button class="button" >Услуги</button>
+                <button class="button" >Портфолио</button>
+                <button class="button" >О компании</button>
+                <button class="button" >Контакты</button>
+                <button class="button button-yellow" >Новости</button>
+            </div>
+        </div>    
+    </nav>
+    
+    <div class="pageContent" id="pc1" style="background-color:#f2f2f2;height:800px;">
+      <div style="position: absolute;width: 100%;height: 100%">
+          <div class="menu1">
+            <h1 class="bigText">Text</h1>
+            <p>kjkjjlkxcjvfvx</p>
+            <p>kjkjjlkxcjvfvx</p>
+            <p>kjkjjlkxcjvfvx</p>
+            <p>kjkjjlkxcjvfvx</p>    
+       </div>
+      </div>       
+    </div>
+    
+    <div class="pageContent3" id="pc2">
+        <div class="pageContent31">
+            <div>
+                <h1>1col</h1>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>            
+            </div>
+        </div>
+        <div class="pageContent32">    
+            <div>
+                <h1>2col</h1>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+            </div>
+        </div>
+        <div class="pageContent33">    
+            <div>
+                <h1>3col</h1>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+                <p>kjkjjlkxcjvfvx</p>
+            </div>
+        </div>
+    </div>    
+    <script src="jquery.min.js"></script>
+    <script>
+            var mt = false;
+            document.getElementById("mobtn").onclick = function (){
+                if (mt == false){
+                    $("#mobilenav").removeClass("dis");
+                    mt = true;
+                }
+                else{
+                    $("#mobilenav").addClass("dis");
+                    mt = false;
+                }
+                
+            }
+        
+            if($(document).width()<757){
+                $("#mbtn").removeClass("dis");
+                $("#navButtons").addClass("dis");
+            }
+            else {
+                $("#mbtn").addClass("dis");
+                $("#navButtons").removeClass("dis");
+            }
+            $(window).resize (function(){
+            if($(document).width()<757){
+                $("#mbtn").removeClass("dis");
+                $("#navButtons").addClass("dis");
+            }
+            else {
+                $("#mbtn").addClass("dis");
+                $("#mobilenav").addClass("dis");
+                mt = false;
+                $("#navButtons").removeClass("dis");
+            }
+            })
+    </script>
+<!--
+    <script>
+        $(document).scroll (function(){
+           if ($(document).scrollTop() > 10)
+               $('nav').addClass('navfixed');
+           else
+               $('nav').removeClass('navfixed');
+        });
+    </script>
+-->
+</body>
+</html>

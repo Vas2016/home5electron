@@ -31,14 +31,23 @@
             class="close">
             <img src="../../icons/ic_close_white_48px.svg" alt="" srcset="" class="menuImgRight">
         </div>
+        <div style="width:16px; height:16px; left:2px; top:2px; position: absolute; -webkit-app-region: no-drag; cursor: pointer;"
+            class="minimize">
+            <img src="../../icons/baseline-minimize-24px.svg" alt="" srcset="" class="menuImgLeft">
+        </div>
     </div>
     <div class="content">
-        <p class="vt">IP</p>
-        <input type="text" class="inputtext" id="ip"/>
-        <p class="vt">MQTT INIT</p>
-        <div class="button1" id="btn_conn">
-            <p>connect</p>
-        </div>
+        <button class="button button-green2 black-text-active">Green 2</button>
+        <button class="button button-green1 black-text-active">Green 1</button>
+        <button class="button button-orange1 black-text-active">Orange 1</button>
+        <button class="button button-orange2 black-text-active">Orange 2</button>
+        <button class="button button-red black-text-active">Red</button>
+        <!-- <p class="vt">IP</p> -->
+        <!-- <input type="text" class="inputtext"/> -->
+        <!-- <p class="vt">MQTT INIT</p> -->
+        <!-- <div class="button1" id="btn_conn"> -->
+        <!-- <p>connect</p> -->
+        <!-- </div> -->
     </div>
 
 
@@ -49,19 +58,18 @@
             ipcRenderer.send('close', 'close');
         }
         var closeEl = document.querySelector('.close');
+
         closeEl.addEventListener('click', function () {
             close();
         });
-        
-        function btn_conn_hand() {
-            var ip = document.querySelector('#ip').value;
-            ipcRenderer.send('btn_conn', ip);
+
+        function minimize() {
+            ipcRenderer.send('min_main', 'min_main');
         }
-        var btn_conn = document.querySelector('#btn_conn');
-        btn_conn.addEventListener('click', function () {
-            console.log('btn');
-            
-            btn_conn_hand()
+        var minimizeEl = document.querySelector('.minimize');
+
+        minimizeEl.addEventListener('click', function () {
+            minimize();
         });
 
     </script>

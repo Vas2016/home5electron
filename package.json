@@ -1,0 +1,19 @@
+{
+  "name": "home5electron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vas2016/home5electron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vas2016/home5electron/issues"
+  },
+  "homepage": "https://github.com/Vas2016/home5electron#readme"
+}
